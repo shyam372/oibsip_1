@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4A0F7"
+    tools:context=".temperature">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="#702963"
+        android:padding="30dp">
+
+        <ImageView
+
+            android:id="@+id/left_icon_temp"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:layout_alignParentEnd="false"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80sp"
+            android:layout_marginTop="20sp"
+            android:text="@string/temp"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_above="@+id/values"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20sp"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/inputnum"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15sp"
+                android:textSize="15sp"
+                android:hint="Enter value"
+                android:textColorHint="#707070"
+                android:inputType="numberDecimal"
+                android:layout_gravity="center"
+                android:textColor="@color/black">
+
+            </EditText>
+            <Spinner
+                android:id="@+id/unit"
+                android:layout_marginStart="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15sp"
+                android:outlineSpotShadowColor="@color/black"
+                android:background="@color/black">
+
+            </Spinner>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="70sp"
+        android:layout_alignParentBottom="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="#81007F">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="218sp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="15sp"
+                android:text="Celsius"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+
+            </TextView>
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0.7dp"
+                android:background="#81007F">
+
+            </View>
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/white"
+                android:paddingVertical="15sp"
+                android:gravity="center"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2sp"
+            android:background="#81007F">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="218sp"
+                android:layout_height="wrap_content"
+                android:text="Fahrenheit"
+                android:textColor="@color/white"
+                android:paddingVertical="15sp"
+                android:gravity="center"
+                android:textSize="20sp">
+
+            </TextView>
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0.7dp"
+                android:background="#81007F">
+
+            </View>
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/white"
+                android:paddingVertical="15sp"
+                android:gravity="center"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2sp"
+            android:background="#81007F">
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="218sp"
+                android:layout_height="wrap_content"
+                android:text="Kelvin"
+                android:textColor="@color/white"
+                android:paddingVertical="15sp"
+                android:gravity="center"
+                android:textSize="20sp">
+
+            </TextView>
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="0.7dp"
+                android:background="#81007F">
+
+            </View>
+            <TextView
+                android:id="@+id/k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/white"
+                android:paddingVertical="15sp"
+                android:gravity="center"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2sp"
+            android:background="#81007F">
+
+        </View>
+    </LinearLayout>
+
+</RelativeLayout>

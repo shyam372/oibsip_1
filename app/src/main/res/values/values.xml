@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="length">LENGTH</string>
+    <string name="temp">TEMPERATURE</string>
+    <string name="weight">WEIGHT</string>
+</resources>
